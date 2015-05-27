@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_upcoming"
+        android:title="@string/action_upcoming"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_past"
+        android:title="@string/action_past"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_by_date"
+        android:title="@string/action_by_date"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

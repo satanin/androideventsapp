@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VlcTechHub</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_upcoming">Upcoming Events</string>
+    <string name="action_past">Past Events</string>
+    <string name="action_by_date">Events By Date</string>
+    <string name="action_share">Share</string>
+
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>
