@@ -16,11 +16,11 @@ public class EventDbHelper extends SQLiteOpenHelper {
     final private static String NAME = "eventapp";
     final static String TABLE_NAME = "event";
     final static String ID = "_id";
-    final static String C_EVENT_ID = "event_id";
-    final static String C_TITLE = "title";
-    final static String C_DESCRIPTION = "description";
-    final static String C_LINK = "link";
-    final static String C_DATE = "date";
+    public final static String C_EVENT_ID = "event_id";
+    public final static String C_TITLE = "title";
+    public final static String C_DESCRIPTION = "description";
+    public final static String C_LINK = "link";
+    public final static String C_DATE = "date";
 
     //Modos edicion
     public static final String C_MODO  = "modo" ;
@@ -69,9 +69,9 @@ public class EventDbHelper extends SQLiteOpenHelper {
         return db.query(TABLE_NAME, db_columns, consulta, new String[] {}, null, null, null );
     }
 
-    public Cursor getRegistro(long id) throws SQLException {
+    public Cursor getRegistro(String title, String date) throws SQLException {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor c = db.query(true, TABLE_NAME, db_columns, ID + " = " + id, null, null, null, null,null);
+        Cursor c = db.query(true, TABLE_NAME, db_columns, C_TITLE + " = '" + title +"' AND "+ C_DATE + " = '" + date +"'", null, null, null, null,null);
 
         if (c!= null){
             c.moveToFirst();

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -159,7 +160,12 @@ public class EventsFragment extends Fragment {
                 date = eventInfo.getString(EVENT_DATE);
                 description = eventInfo.getString(EVENT_DESCRIPTION);
                 link = eventInfo.getString(EVENT_LINK);
-                reg.put(mEventDbHelper.,id);
+                reg.put(mEventDbHelper.C_EVENT_ID,id);
+                reg.put(mEventDbHelper.C_TITLE,title);
+                reg.put(mEventDbHelper.C_DESCRIPTION,description);
+                reg.put(mEventDbHelper.C_LINK, link);
+                reg.put(mEventDbHelper.C_DATE, date);
+                mEventDbHelper.insert(reg);
                 resultStrs[i] = title + " - " + date;
 
             }
